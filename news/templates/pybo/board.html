@@ -1,0 +1,103 @@
+{% load static %}
+<!DOCTYPE html>
+
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=360">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<link rel="stylesheet" href="{% static 'nrib.css' %}">
+
+</head>
+
+<body>
+    <div class="윗화살표"></div>
+    <div class="아래화살표"></div>
+    <span class="제목 Gothic">
+        {{question.subject}}
+      </span>
+
+      <div class="모더 Gothic">
+        모더레이터
+        <span class="이름">노브레인</span>
+      </div>  
+
+    <div class="모더한마디네모"><span class="모더한마디 Myeongjo">모더레이터의 한마디
+    </span>
+    <div class="모더내용 Myeongjo">{{question.content}}</div>
+    </div>
+    <div class="동영상"></div>
+    <div class="영상요약보기 Myeongjo">
+        영상 요약보기
+        <div class="접기버튼"></div>
+    </div>
+      <div class="요약창">
+        <span class="반려인대표">
+            반려인 대표
+          </span>
+          <span class="반려인대표설명">
+            변호사12
+          </span>  
+          <div class="반려인말풍선"><span class="반려인말풍선내용">
+            맹견의 범위가 확대되어 맹견으로 취급되는 
+          애완견일 경우에 관련 법 조항에 의해서 
+          견주들의 책임 의무가 너무 많아 집니다.
+          </span></div>
+          <span class="비반려인대표">
+            비반려인 대표
+            <span class="비반려인대표설명">
+              대학생
+            </span>  
+          </span>
+          <div class="비반려인말풍선"><span class="비반려인말풍선내용">
+            소방청에 따르면, 5년 간 개 물림 사고가 
+            12,345건 발생. 하지만 이 중 맹견을 제외한 
+            일반 반려견 건수가 전체의 80% 였습니다.  
+            따라서 맹견의 범위 확대에 찬성합니다.
+
+          </span></div>
+        
+      </div>
+      <span class="토론하기">
+        토론하기
+      </span>
+      <div class="여러분의의견을">
+        여러분의 의견을 들려주세요
+      </div>
+      
+        <span class="반려인">반려인</span>
+        <span class="비반려인">비반려인</span>
+        <div class="num1">320<span class="num2">280</span></div>
+
+    <div class="색버튼"></div>
+    <div class="무색버튼"></div>
+    <div class="댓글매너공지"><span class="토의참여자들은">
+        토의 참여자들은 여러분의 생각이 담긴 댓글을 참고하여 
+      토의를 진행합니다.
+      </span>
+      <div class="올바른토의문화">
+        * 올바른 토의문화를 위해 각 번호의 의견과 무관한 댓글 
+      (정치, 인신공격 등)에 있어 바로 삭제 조치가 이루어집니다.
+      </div>
+    </div>
+
+      <div class="본인댓글프로필">
+          <div class="댓글빈칸">
+            <form action="{% url 'pybo:answer_create' question.id %}"
+              method="post">
+              {% csrf_token %}
+                <textarea name="content" id="content"></textarea>
+              
+            <input type="submit" value="등록"></span>
+            </div>
+      </div>
+      
+    {% for answer in question.answer_set.all %}
+      <div class="본인댓글프로필">
+      <div class="reply">{{ answer.content }}</div>
+    </div>
+    {% endfor %}
+    <div class="foot"> 위로 </div>
+      </body>
+</html>
+

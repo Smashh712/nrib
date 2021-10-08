@@ -1,0 +1,13 @@
+{
+    "sqltools.connections": [
+
+        {
+            "previewLimit": 50,
+            "driver": "SQLite",
+            "database": "c:/hs/Practice/news/db.sqlite3",
+            "name": "pybo"
+        }
+    ],
+    "python.linting.flake8Enabled": true,
+    "python.linting.enabled": true
+}
