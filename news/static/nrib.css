@@ -1,17 +1,17 @@
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
 
-.Gothic{
-  font-family: 'Nanum Gothic', serif;
+.Gothic {
+  font-family: "Nanum Gothic", serif;
 }
-.Myeongjo{
-  font-family: 'Nanum Myeongjo', serif;
+.Myeongjo {
+  font-family: "Nanum Myeongjo", serif;
 }
-.king{
+.king {
   font-weight: 900;
 }
 
-.윗화살표{    
+.윗화살표 {
   width: 9.2px;
   height: 9.2px;
   margin: 0 0 7.8px;
@@ -55,18 +55,18 @@
 }
 
 .모더한마디네모 {
-    width: 312px;
-    height: 120px;
-    margin: 20px 24px 28px;
-    
-    background-color: #f8f8f8;
+  width: 312px;
+  height: 120px;
+  margin: 20px 24px 28px;
+
+  background-color: #f8f8f8;
 }
 
-.모더한마디{
+.모더한마디 {
   width: 95px;
   height: 15px;
   margin-left: 15px;
-  margin-bottom: 90px ;
+  margin-bottom: 90px;
   font-size: 11px;
   font-weight: bold;
   font-stretch: normal;
@@ -75,13 +75,12 @@
   letter-spacing: -0.12px;
   text-align: left;
   color: #333;
-
 }
 
-.모더내용{
+.모더내용 {
   width: 265px;
   height: 60px;
-  margin-left: 15px ;
+  margin-left: 15px;
   margin-top: 10px;
   font-size: 12px;
   font-weight: normal;
@@ -92,12 +91,12 @@
   text-align: left;
   color: #999;
 }
-  
+
 .동영상 {
   width: 360px;
   height: 240px;
   margin: 28px 0 0;
- 
+
   background-color: #000;
 }
 
@@ -117,7 +116,7 @@
   color: #333;
 }
 
-.접기버튼{
+.접기버튼 {
   width: 10px;
   height: 1px;
   margin-left: 324px;
@@ -133,7 +132,7 @@
   background-color: #f8f8f8;
 }
 
-.반려인대표{
+.반려인대표 {
   width: 54px;
   height: 15px;
   margin: 0 4px 6px 14px;
@@ -162,16 +161,15 @@
   color: #999;
 }
 .반려인말풍선 {
-  
-    background-color: #e0def7;
-    padding: 13px;
-    font-size: 18px;
-    border-radius: 15px;
-    border-top-left-radius: 1px;
-    margin-right: 5px;
+  background-color: #e0def7;
+  padding: 13px;
+  font-size: 18px;
+  border-radius: 15px;
+  border-top-left-radius: 1px;
+  margin-right: 5px;
 }
-.반려인말풍선내용{
-    width: 199px;
+.반려인말풍선내용 {
+  width: 199px;
   height: 45px;
   font-family: Pretendard;
   font-size: 12px;
@@ -182,9 +180,8 @@
   letter-spacing: -0.12px;
   text-align: left;
   color: #333;
-
 }
-.비반려인대표{
+.비반려인대표 {
   width: 64px;
   height: 15px;
   margin: 0 5px 6px 121px;
@@ -198,7 +195,7 @@
   text-align: left;
   color: #333;
 }
-.비반려인대표설명{
+.비반려인대표설명 {
   width: 31px;
   height: 15px;
   margin: 0 14px 6px 5px;
@@ -212,7 +209,7 @@
   text-align: left;
   color: #999;
 }
-.비반려인말풍선{
+.비반려인말풍선 {
   width: 235px;
   height: 87px;
   margin: 6px 0 0;
@@ -221,8 +218,8 @@
   border-radius: 15px;
   border-top-right-radius: 1px;
 }
-.비반려인말풍선내용{
-    width: 203px;
+.비반려인말풍선내용 {
+  width: 203px;
   height: 60px;
   font-family: Pretendard;
   font-size: 12px;
@@ -235,10 +232,9 @@
   color: #333;
 }
 
-
 .토론하기 {
-  margin-top: 30px; 
-  margin-left: 24px;  
+  margin-top: 30px;
+  margin-left: 24px;
   width: 55px;
   height: 19px;
   font-family: Pretendard;
@@ -250,9 +246,8 @@
   letter-spacing: -0.16px;
   text-align: left;
   color: #333;
-  
 }
-.여러분의의견을{
+.여러분의의견을 {
   margin-top: 4px;
   margin-left: 24px;
   margin-bottom: 30px;
@@ -268,7 +263,7 @@
   text-align: left;
   color: #999;
 }
-.반려인{
+.반려인 {
   margin-left: 72px;
   float: left;
   width: 48px;
@@ -279,11 +274,10 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.14px;
-  
+
   color: #5f50ef;
 }
 .비반려인 {
-    
   width: 48px;
   height: 17px;
   font-size: 13px;
@@ -292,17 +286,14 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.14px;
-  
+
   color: #999;
   margin-left: 138px;
-
 }
-.num1{
-  
+.num1 {
   width: 360px;
   height: 17px;
 
-  
   margin-left: 80px;
   font-family: NotoSans;
   font-size: 12px;
@@ -314,12 +305,11 @@
   text-align: left;
   color: #999;
 }
-.num2{
-  
+.num2 {
   width: 360px;
   height: 17px;
   margin-left: 160px;
- 
+
   font-family: NotoSans;
   font-size: 12px;
   font-weight: 500;
@@ -374,16 +364,14 @@
   color: #999;
 }
 .본인댓글프로필 {
- 
   width: 35px;
   height: 35px;
-  margin-top:32px;
+  margin-top: 32px;
   margin-left: 24px;
   background-color: #dbdbdb;
   border-radius: 50px;
 }
 .댓글빈칸 {
-  
   margin-left: 50px;
   margin-top: 30px;
   width: 264px;
@@ -393,7 +381,6 @@
   background-color: #fff;
 }
 .reply {
-  
   margin-left: 50px;
   margin-top: 30px;
   width: 264px;
@@ -403,7 +390,6 @@
 }
 
 .foot {
-  
   margin-left: 50px;
   margin-top: 30px;
   width: 264px;
@@ -413,7 +399,6 @@
 }
 
 .의견을 {
-
   width: 95px;
   height: 15px;
   margin-left: 13px;
@@ -425,10 +410,10 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.12px;
-  
+
   color: #999;
 }
-.등록{
+.등록 {
   width: 21px;
   height: 15px;
   margin-top: 11px;
@@ -440,7 +425,7 @@
   font-style: normal;
   line-height: normal;
   letter-spacing: -0.12px;
-  
+
   color: #5f50ef;
 }
 
@@ -458,7 +443,7 @@
   text-align: left;
   color: #333;
 }
-.좋아요{
+.좋아요 {
   width: 11px;
   height: 9.6px;
   margin: 14px 4px 16.4px 14px;
@@ -505,14 +490,14 @@
   background-color: #d1d1d1;
 }
 
-.red{
-  background-color:rgba(72, 88, 233, 0.788);
+.red {
+  background-color: rgba(72, 88, 233, 0.788);
 }
 
 .container_nrib {
-	display: flex;
-    flex-direction: row-reverse;
-    justify-content: flex-start;
-    align-items: stretch;
-	/* display: inline-flex; */
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: flex-start;
+  align-items: stretch;
+  /* display: inline-flex; */
 }

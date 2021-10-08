@@ -1,34 +1,34 @@
-{% extends 'base.html' %}
-{% block content %}
+{% extends 'base.html' %} {% block content %}
 
 <div class="time_container">
-    <div class="top-section Myeongjo">
-        <h1>당신의 중립을 위한 재료들</h1>
-    </div>
+  <div class="top-section Myeongjo">
+    <h1>당신의 중립을 위한 재료</h1>
+  </div>
 
-<div class="timeline">
+  <div class="timeline">
     <div class="line"></div>
-    {% for question in question_list %}
-    {% if question.flag == False %}
+    {% for question in question_list %} {% if question.flag == False %}
     <div class="section time-right">
-        <div class="bead"></div>
-        <div class="content text-align-left">
-            <p class="date"> {{ question.create_date }}<p>
-            <h2 class="Myeongjo">{{ question.subject}}</h2>
-            <p> {{ question.content }} </p>
-        </div>
-    {% elif question.flag == True %}   
-    <div class="section">
+      <div class="bead"></div>
+      <div class="content text-align-left">
+        <p class="date">{{ question.create_date }}</p>
+        <p></p>
+        <h2 class="Myeongjo">{{ question.subject}}</h2>
+        <p>{{ question.content }}</p>
+      </div>
+      {% elif question.flag == True %}
+      <div class="section">
         <div class="bead"></div>
         <div class="content text-align-right">
-            <p class="date"> {{ question.create_date }}<p>
-            <h2 class="Myeongjo">{{ question.subject}}</h2>
-            <p> {{ question.content }} </p>
+          <p class="date">{{ question.create_date }}</p>
+          <p></p>
+          <h2 class="Myeongjo">{{ question.subject}}</h2>
+          <p>{{ question.content }}</p>
         </div>
-    {% endif %}
+        {% endif %}
+      </div>
+      {% endfor %}
     </div>
-    {% endfor %}
-</div>
+  </div>
 </div>
 {% endblock %}
-
