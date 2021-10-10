@@ -1,5 +1,11 @@
 {% extends 'base.html' %}
+{% load static %}
+{% block js %}
+
+{% endblock js %}
+
 {% block content %}
+
 
 <div class="time_container">
   <div class="top-section Myeongjo">
@@ -8,7 +14,9 @@
 
   <div class="timeline">
     <div class="line"></div>
-    {% for question in question_list %} {% if question.flag == False %}
+
+    {% for question in question_list %}
+    {% if question.side == False %}
     <div class="section time-right">
       <div class="bead"></div>
       <div class="content text-align-left">
@@ -17,7 +25,7 @@
         <h2 class="Myeongjo">{{ question.subject}}</h2>
         <p>{{ question.content }}</p>
       </div>
-      {% elif question.flag == True %}
+      {% elif question.side == True %}
       <div class="section">
         <div class="bead"></div>
         <div class="content text-align-right">

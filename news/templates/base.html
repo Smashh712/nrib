@@ -10,8 +10,6 @@
   {% block css %}
   {% endblock css %}
 
-  {% block js %}
-  {% endblock js %}
 
 
   <title></title>
@@ -21,7 +19,8 @@
   {% comment "" %}{% include "navbar.html" %}{% endcomment %}
 
   {% block content %}{% endblock %}
-
+  {% block js %}
+  {% endblock js %}
   <!-- jQuery JS -->
   <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
   <!-- Bootstrap JS-->

@@ -77,6 +77,7 @@ def board(request, question_id):
 
 def timeline(request):
     question_list = Question.objects.order_by("create_date")
+    print(question_list)
     context = {"question_list": question_list}
     return render(request, "timeline.html", context)
 
