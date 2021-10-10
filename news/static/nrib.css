@@ -1,503 +1,294 @@
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Gothic&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Nanum+Myeongjo&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansMedium";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
 
+/*   background: rgb(243, 243, 243); */
+.custom_form {
+  width: 90%;
+  margin: 0;
+  margin-block-end: 0;
+}
 .Gothic {
   font-family: "Nanum Gothic", serif;
 }
 .Myeongjo {
-  font-family: "Nanum Myeongjo", serif;
-}
-.king {
-  font-weight: 900;
+  font-family: "GmarketSansMedium";
 }
 
-.윗화살표 {
-  width: 9.2px;
-  height: 9.2px;
-  margin: 0 0 7.8px;
-  background-color: #000;
-}
-.아래화살표 {
-  width: 9.2px;
-  height: 9.2px;
-  margin: 7.8px 0 0;
-  background-color: #000;
-}
-.제목 {
-  width: 288px;
-  height: 34px;
-  margin: 0 48px 8px 24px;
-  font-size: 28px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.28px;
-  text-align: center;
-  color: #333;
-}
-.모더 {
-  width: 120px;
-  height: 17px;
-  margin: 8px 225px 20px 24px;
-  font-size: 13px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.14px;
-  text-align: left;
-  color: #999;
+.Sans {
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-.모더 .이름 {
-  font-weight: bold;
+.discuss-title {
+  font-weight: 600;
+  margin-top: 10px;
+  margin-left: 30px;
+  color: #000;
+  font-size: 34px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-.모더한마디네모 {
-  width: 312px;
-  height: 120px;
-  margin: 20px 24px 28px;
-
-  background-color: #f8f8f8;
+.discuss-title-moder {
+  margin-top: 15px;
+  margin-left: 30px;
+  color: rgba(95, 95, 95, 0.87);
+  font-size: 18px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
-.모더한마디 {
-  width: 95px;
-  height: 15px;
-  margin-left: 15px;
-  margin-bottom: 90px;
-  font-size: 11px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #333;
+.discuss-title-comment {
+  background-color: rgb(243, 243, 243);
+  margin-top: 15px;
+  margin-left: 30px;
+  padding: 20px;
+  width: 90%;
+  color: #000000;
+  font-size: 15px;
+  font-weight: 800;
+  font-family: "Nanum Gothic", serif;
+}
+.discuss-title-comment-inner {
+  margin-top: 10px;
+  color: rgb(95, 95, 95, 0.87);
+  font-size: 14px;
+  font-weight: 600;
+  font-family: "Nanum Gothic", serif;
 }
 
-.모더내용 {
-  width: 265px;
+.youtube {
+  margin-top: 30px;
+}
+.balloon {
+  font-weight: 600;
+  font-size: 13;
+  position: relative;
+  margin-top: 5px;
+  padding: 20px 20px 20px 20px;
+  width: 100%;
+  background: rgb(243, 243, 243);
+  border-radius: 10px;
+}
+.balloon-invisible {
+  color: rgb(243, 243, 243);
+}
+.balloon_02 {
+  background: #ffffff;
+}
+
+.balloon_02:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  right: -15px;
+  border-top: 15px solid #ffffff;
+  border-right: 15px solid transparent;
+  border-left: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+}
+
+.balloon_03 {
+  background: #b3acec;
+}
+
+.balloon_03:after {
+  content: "";
+  position: absolute;
+  top: 10px;
+  left: -15px;
+  border-top: 15px solid #b3acec;
+  border-left: 15px solid transparent;
+  border-right: 0px solid transparent;
+  border-bottom: 0px solid transparent;
+}
+.talker,
+.talker_r {
+  font-size: 14px;
+}
+.talker_r {
+  text-align: right;
+}
+/* 탭 전체 스타일 */
+.tabs {
+  margin-top: 50px;
+  padding-bottom: 40px;
+  background-color: #ffffff;
+  width: 100%;
+  margin: 0 auto;
+}
+
+/* 탭 스타일 */
+.tab_item {
+  width: calc(100% / 2);
   height: 60px;
-  margin-left: 15px;
+  border-bottom: 1px solid #757575;
+  background-color: #ffffff;
+  line-height: 40px;
+  font-size: 16px;
+  text-align: center;
+  color: #a5a5a5;
+  display: block;
+  float: left;
+  text-align: center;
+  font-weight: bold;
+  transition: all 0.2s ease;
+}
+.tab_item:hover {
+  opacity: 0.75;
+}
+
+/* 라디오 버튼 UI삭제*/
+input[name="tab_item"] {
+  display: none;
+}
+
+/* 탭 컨텐츠 스타일 */
+.tab_content {
+  display: none;
+  padding: 20px 20px 0;
+  clear: both;
+  overflow: hidden;
+}
+
+/* 선택 된 탭 콘텐츠를 표시 */
+#a_diss:checked ~ #a_content,
+#b_diss:checked ~ #b_content {
+  display: block;
+}
+
+/* 선택된 탭 스타일 */
+.tabs input:checked + .tab_item {
+  background-color: #ffffff;
+  border-bottom: 2px solid rgba(84, 54, 219, 0.87);
+  color: rgba(84, 54, 219, 0.87);
+}
+
+.agree-num {
+  line-height: 5px;
+  font-size: 12px;
+  color: #a5a5a5;
+}
+
+.agree-num input:checked {
+  line-height: 0px;
+  font-size: 12px;
+  color: #8a8a8a;
+}
+
+.discuss-notice {
+  text-align: center;
+  padding: 20px 20px 20px 20px;
+  background: rgb(243, 243, 243);
+  width: 100%;
+  color: #8a8a8a;
+  font-weight: 600;
+  font-size: 13px;
+}
+
+.discuss-notice-text {
   margin-top: 10px;
   font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #999;
+  color: black;
 }
 
-.동영상 {
-  width: 360px;
-  height: 240px;
-  margin: 28px 0 0;
-
-  background-color: #000;
-}
-
-.영상요약보기 {
-  width: 80px;
-  height: 17px;
-  margin-left: 24px;
-  margin-top: 17px;
-  margin-bottom: 16px;
-  font-size: 14px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.14px;
-  text-align: left;
-  color: #333;
-}
-
-.접기버튼 {
-  width: 10px;
-  height: 1px;
-  margin-left: 324px;
-  margin-bottom: 24px;
-  background-color: #333;
-}
-
-.요약창 {
-  margin-bottom: 30px;
-  width: 360px;
-  height: 262px;
-
-  background-color: #f8f8f8;
-}
-
-.반려인대표 {
-  width: 54px;
-  height: 15px;
-  margin: 0 4px 6px 14px;
-  font-family: Pretendard;
-  font-size: 12px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #333;
-}
-.반려인대표설명 {
-  width: 43px;
-  height: 15px;
-  margin: 0 120px 6px 4px;
-  font-family: Pretendard;
-  font-size: 12px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #999;
-}
-.반려인말풍선 {
-  background-color: #e0def7;
-  padding: 13px;
-  font-size: 18px;
-  border-radius: 15px;
-  border-top-left-radius: 1px;
-  margin-right: 5px;
-}
-.반려인말풍선내용 {
-  width: 199px;
-  height: 45px;
-  font-family: Pretendard;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #333;
-}
-.비반려인대표 {
-  width: 64px;
-  height: 15px;
-  margin: 0 5px 6px 121px;
-  font-family: Pretendard;
-  font-size: 12px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #333;
-}
-.비반려인대표설명 {
-  width: 31px;
-  height: 15px;
-  margin: 0 14px 6px 5px;
-  font-family: Pretendard;
-  font-size: 12px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #999;
-}
-.비반려인말풍선 {
-  width: 235px;
-  height: 87px;
-  margin: 6px 0 0;
-  padding: 14px 18px 13px 14px;
+.d-sub {
+  color: rgba(84, 54, 219, 0.87);
+  font-weight: 600;
+  position: absolute;
+  right: 2%;
+  top: 15%;
+  border: 0;
   background-color: #fff;
-  border-radius: 15px;
-  border-top-right-radius: 1px;
 }
-.비반려인말풍선내용 {
-  width: 203px;
-  height: 60px;
-  font-family: Pretendard;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #333;
+.d-sub:hover {
+  color: rgba(103, 68, 255, 0.87);
 }
 
-.토론하기 {
-  margin-top: 30px;
-  margin-left: 24px;
-  width: 55px;
-  height: 19px;
-  font-family: Pretendard;
-  font-size: 16px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.16px;
-  text-align: left;
-  color: #333;
+.diss-reply {
+  color: black;
+  margin: 40px 0px 0px 0px;
 }
-.여러분의의견을 {
-  margin-top: 4px;
-  margin-left: 24px;
-  margin-bottom: 30px;
-  width: 200px;
-  height: 17px;
-  font-family: Pretendard;
+
+.pd-0 {
+  padding-left: 0;
+}
+
+.diss-reply-comment {
+  font-family: "Nanum Gothic";
+  font-weight: 500;
   font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.14px;
-  text-align: left;
-  color: #999;
+  padding-top: 5px;
 }
-.반려인 {
-  margin-left: 72px;
-  float: left;
-  width: 48px;
-  height: 17px;
+
+.diss-like {
+  color: rgba(84, 54, 219, 0.87);
+}
+
+.diss-like:hover {
+  color: rgba(103, 68, 255, 0.87);
+}
+
+.diss-tool {
+  position: relative;
+  margin-top: 5px;
+}
+.reply-btn {
+  color: rgba(0, 0, 0, 0.87);
+  font-weight: 600;
+  position: relative;
+  border: 0;
+  font-size: 14px;
+}
+.report-btn {
+  color: rgba(95, 95, 95, 0.87);
+  font-weight: 500;
+  position: relative;
+  left: 83%;
+  border: 0;
+  font-size: 14px;
+}
+
+.report-rereply {
+  color: rgba(95, 95, 95, 0.87);
+  font-weight: 500;
+  position: relative;
+  left: 105%;
+  border: 0;
+  font-size: 14px;
+}
+.re-reply-input {
+  width: 100%;
+  border: 0;
+  border-bottom: 1px solid rgba(95, 95, 95, 0.87);
+  margin-bottom: 20px;
+}
+
+.re-reply-box {
   font-size: 13px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.14px;
-
-  color: #5f50ef;
+  position: relative;
+  margin-left: 30px;
 }
-.비반려인 {
-  width: 48px;
-  height: 17px;
+
+.re-reply-btn {
+  color: rgba(95, 95, 95, 0.87);
+  font-weight: 600;
+  position: absolute;
   font-size: 13px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.14px;
-
-  color: #999;
-  margin-left: 138px;
-}
-.num1 {
-  width: 360px;
-  height: 17px;
-
-  margin-left: 80px;
-  font-family: NotoSans;
-  font-size: 12px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #999;
-}
-.num2 {
-  width: 360px;
-  height: 17px;
-  margin-left: 160px;
-
-  font-family: NotoSans;
-  font-size: 12px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #999;
-}
-.색버튼 {
-  width: 180px;
-  height: 2px;
-  background-color: #5f50ef;
-}
-.무색버튼 {
-  width: 360px;
-  height: 1px;
-  background-color: #d1d1d1;
-}
-.댓글매너공지 {
-  width: 312px;
-  height: 105px;
-  padding: 17px 24px 18px 15px;
-  background-color: #f8f8f8;
-}
-.올바른토의문화 {
-  width: 312px;
-  height: 30px;
-  margin: 10px 0 0;
-  font-size: 11px;
-  font-weight: 500;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #333;
-}
-.토의참여자들은 {
-  width: 256px;
-  height: 30px;
-  margin: 0 17px 10px 0;
-  font-family: Pretendard;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #999;
-}
-.본인댓글프로필 {
-  width: 35px;
-  height: 35px;
-  margin-top: 32px;
-  margin-left: 24px;
-  background-color: #dbdbdb;
-  border-radius: 50px;
-}
-.댓글빈칸 {
-  margin-left: 50px;
-  margin-top: 30px;
-  width: 264px;
-  height: 38px;
-  border-radius: 5px;
-  border: solid 1px #d1d1d1;
+  left: 90%;
+  bottom: 53%;
   background-color: #fff;
 }
-.reply {
-  margin-left: 50px;
-  margin-top: 30px;
-  width: 264px;
-  border-radius: 5px;
-  border: solid 1px #d1d1d1;
-  background-color: #fff;
-}
-
-.foot {
-  margin-left: 50px;
-  margin-top: 30px;
-  width: 264px;
-  border-radius: 5px;
-  border: solid 1px #000000;
-  background-color: rgb(255, 255, 255);
-}
-
-.의견을 {
-  width: 95px;
-  height: 15px;
-  margin-left: 13px;
-  margin-top: 20px;
-  font-family: Pretendard;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-
-  color: #999;
-}
-.등록 {
-  width: 21px;
-  height: 15px;
-  margin-top: 11px;
-  opacity: 0.5;
-  font-family: Pretendard;
-  font-size: 12px;
-  font-weight: bold;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-
-  color: #5f50ef;
-}
-
-.댓글1 {
-  width: 264px;
-  height: 68px;
-  margin: 1px 0 10px 13px;
-  font-family: Pretendard;
-  font-size: 14px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.14px;
-  text-align: left;
-  color: #333;
-}
-.좋아요 {
-  width: 11px;
-  height: 9.6px;
-  margin: 14px 4px 16.4px 14px;
-  background-color: #5f50ef;
-}
-
-.답글입력 {
-  width: 44px;
-  height: 15px;
-  margin: 0 198px 4px 4px;
-  font-family: Pretendard;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #999;
-}
-.답글취소동그라미 {
-  width: 44px;
-  height: 15px;
-  margin: 0 198px 4px 4px;
-  font-family: Pretendard;
-  font-size: 12px;
-  font-weight: normal;
-  font-stretch: normal;
-  font-style: normal;
-  line-height: normal;
-  letter-spacing: -0.12px;
-  text-align: left;
-  color: #999;
-}
-.답글취소동그라미엑스 {
-  width: 6px;
-  height: 6px;
-  background-color: #fff;
-}
-.답글입력란 {
-  width: 264px;
-  height: 1px;
-  margin: 4px 0 0;
-  background-color: #d1d1d1;
-}
-
-.red {
-  background-color: rgba(72, 88, 233, 0.788);
-}
-
-.container_nrib {
-  display: flex;
-  flex-direction: row-reverse;
-  justify-content: flex-start;
-  align-items: stretch;
-  /* display: inline-flex; */
+.re-reply-input:focus {
+  outline: 0;
 }

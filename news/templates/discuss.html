@@ -1,119 +1,250 @@
-{% extends 'base.html' %}
+{% extends 'base.html' %} {% load static template_filters  %}
+
+<!-- jQuery JS -->
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'nrib.css' %}" />
+<link rel="stylesheet" type="text/css"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.8.2/css/all.min.css" />
+{% endblock css %}
+{% block js %}
+
+<script>
+  function openCloser(id) {
+    var ids = id;
+    if (document.getElementById(id + 'box').style.display === 'block') {
+      document.getElementById(id + 'box').style.display = 'none';
+    } else {
+      document.getElementById(id + 'box').style.display = 'block';
+    }
+  }
+</script>
+
+{% endblock js %}
 {% block content %}
-<body style="background-color:#fff;background-image:None;">
-fuck
-<div class="postion-relative">
-  <div class="position-absolute top-50 start-50">
-<button type="button" class="btn btn-primary">Primary</button>
-	<p class="bg-primary center-block" style="width: 500px;padding:15px;">가운데 정렬하기</p>
-    <div class="윗화살표"></div>
-    <div class="아래화살표"></div>
-    <span class="제목">
-        왜 저 개는 입마개를 안하죠?
-      </span>
 
-      <div class="모더">
-        모더레이터
-        <span class="이름">노브레인</span>
-      </div>  
+<body style="background-color: #000000; background-image: None">
+  <div class="container-md " style="width:500px; background-color: #fff; padding:0;">
+    <div>
+      <div class="discuss-top">
 
-    <div class="모더한마디네모"><span class="모더한마디">모더레이터의 한마디
-    </span>
-    <div class="모더내용">*동물보호법(조 ) 에 의하여 현재 맹견의 종은 ( , , ,)로 
-        지정되어있습니다.  
-      *맹견의 범위 확장과 관련하여 토의를 진행하겠습니다.   
-      * 주장 관련 자료에는 반드시 출처를 밝힙니다. (댓글
-    </div></div>
-    <div class="동영상"></div>
-    <div class="영상요약보기">
-        영상 요약보기
-        <div class="접기버튼"></div>
-    </div>
-      <div class="요약창">
-        <span class="반려인대표">
-            반려인 대표
-          </span>
-          <span class="반려인대표설명">
-            변호사12
-          </span>  
-          <div class="반려인말풍선"><span class="반려인말풍선내용">
-            맹견의 범위가 확대되어 맹견으로 취급되는 
-          애완견일 경우에 관련 법 조항에 의해서 
-          견주들의 책임 의무가 너무 많아 집니다.
-          </span></div>
-          <span class="비반려인대표">
-            비반려인 대표
-            <span class="비반려인대표설명">
-              대학생
-            </span>  
-          </span>
-          <div class="비반려인말풍선"><span class="비반려인말풍선내용">
-            소방청에 따르면, 5년 간 개 물림 사고가 
-            12,345건 발생. 하지만 이 중 맹견을 제외한 
-            일반 반려견 건수가 전체의 80% 였습니다.  
-            따라서 맹견의 범위 확대에 찬성합니다.
-
-          </span></div>
-        
+        &nbsp;<i class="fa fa-angle-left fa-2x" type="button"
+          style="color:black; font-size:55px; -webkit-text-stroke: 4px white;"></i>
+        <h2 class="discuss-title">{{ issue.subject }}</h2>
+        <h2 class="discuss-title-moder">모더레이터 <b>{{ issue.moderator }}</b></h2>
+        <div class="discuss-title-comment">모더레이터의 한마디
+          <div class="discuss-title-comment-inner">{{issue.content | linebreaks }}</div>
+        </div>
+        <div class="youtube"> <iframe width=100% height="315" src="https://www.youtube.com/embed/{{issue.youtube}}"
+            title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+        </div>
       </div>
-      <span class="토론하기">
-        토론하기
-      </span>
-      <div class="여러분의의견을">
-        여러분의 의견을 들려주세요
-      </div>
-      
-        <span class="반려인">반려인</span>
-        <span class="비반려인">비반려인</span>
-        <div class="num1">320<span class="num2">280</span></div>
-
-    <div class="색버튼"></div>
-    <div class="무색버튼"></div>
-    <div class="댓글매너공지"><span class="토의참여자들은">
-        토의 참여자들은 여러분의 생각이 담긴 댓글을 참고하여 
-      토의를 진행합니다.
-      </span>
-      <div class="올바른토의문화">
-        * 올바른 토의문화를 위해 각 번호의 의견과 무관한 댓글 
-      (정치, 인신공격 등)에 있어 바로 삭제 조치가 이루어집니다.
-      </div>
-    </div>
-
-      <div class="본인댓글프로필">
-          <div class="댓글빈칸">
-              <span class="의견을">의견을 들려주세요 :)</span>
-              <span class="등록">등록</span>
+      <div class="accordion accordion-flush" id="accordionFlushExample">
+        <div class="accordion-item">
+          <h2 class="accordion-header" id="flush-headingOne">
+            <button style="color:#000000;" class="Sans accordion-button collapsed" type="button"
+              data-bs-toggle="collapse" data-bs-target="#flush-collapseOne" aria-expanded="false"
+              aria-controls="flush-collapseOne">
+              영상 요약 보기
+            </button>
+          </h2>
+          <div style="width:100%;background-color:#f3f3f3;color:#000000;" id="flush-collapseOne"
+            class="accordion-collapse collapse" aria-labelledby="flush-headingOne"
+            data-bs-parent="#accordionFlushExample">
+            <div class="accordion-body">
+              <div class="container">
+                <div class="row">
+                  <div class="col">
+                    <div class="talker">
+                      <b>{{issue.agree_representor}} </b>{{issue.agree_representor_id}}
+                    </div>
+                    <div class="balloon balloon_03">{{issue.agree_represent}}
+                    </div>
+                  </div>
+                  <div class="col"></div>
+                </div>
+                <div class="row">
+                  <div class="col"></div>
+                  <div class="col">
+                    <b>&nbsp</b>
+                    <div></div>
+                    <div class="talker_r">
+                      <b>{{issue.disagree_representor}} </b>{{issue.disagree_representor_id}}
+                    </div>
+                    <div class="balloon balloon_02">{{issue.disagree_represent}}</div>
+                  </div>
+                </div>
+              </div>
             </div>
-       
-      </div>
+          </div>
+        </div>
+        <div>&nbsp;</div>
+        <div class="tabs">
+          <input id="a_diss" type="radio" name="tab_item" checked>
+          <label class="tab_item" for="a_diss">{{issue.agree}}<br>
+            <b class="agree-num">{{num.0}}</b>
+          </label>
+          <input id="b_diss" type="radio" name="tab_item">
+          <label class="tab_item" for="b_diss">{{issue.disagree}}<br>
+            <b class="agree-num">{{num.1}}</b>
+          </label>
+          {% comment %} 찬성 {% endcomment %}
+          <div class="tab_content" id="a_content">
+            <div class="discuss-notice">토의 참여자들은 여러분의 생각이 담긴 댓글을 참고하여 <br>토의를 진행합니다.
+              <div class="discuss-notice-text">* 올바른 토의문화를 위해 각 번호의 의견과 무관한 댓글<br>(정치, 인신공격 등)에 있어 바로 삭제 조치가 이루어집니다.
+              </div>
+            </div>
+            <br><br>
+            <div class="input-group mb-3">
+              <i class="fa fa-user-circle fa-2x" style="color:black;">&nbsp;</i>
+              <form class="custom_form" action="{% url 'pybo:issue_reply_create' issue_id=issue.id _side=1 %}"
+                method="post">
+                {% csrf_token %}
+                <input type="text" class="form-control" placeholder="의견을 들려주세요 :)" aria-label="Recipient's username"
+                  name="content" aria-describedby="button-addon2" style="border-radius:8px;">
+                <button class="d-sub" type="submit" id="button-addon2">등록</button>
+              </form>
+            </div>
+            <div class="diss-reply">
+              <div class="container">
+                <!--댓글-->
+                {% for issue_reply in issue.issue_reply_set.all %}
+                {% if issue_reply.side == True %}
+                <div class="row pd-0" style="padding-left:0; margin-bottom:30px;">
+                  <div class="col-1 pd-0 ">
+                    <i class="fa fa-user-circle fa-2x" style="color:black;"></i></div>
+                  <div class="col-9 pd-0" style="padding-top:3px;margin-left:10px;">
+                    <b class="diss-reply-id">익명</b>
+                    <div class="diss-reply-comment">{{ issue_reply.content }}</div>
+                    <div class="diss-tool">
+                      <span class="diss-like"><i class="fa fa-heart"
+                          style="font-size:14px;">&nbsp;{{issue_reply.like}}</i></span>
+                      {% with idx=issue_reply.id %}
+                      <span class="reply-btn" type="button" id="rr{{idx}}" onclick="openCloser(this.id)">답글
+                        {{rereply_num|get_item:idx}}</span>
+                      <span class="report-btn" type="button" id="reply-btn">신고</span>
+                    </div>
+                    <!--- 대댓글 -->
+                    <div class="container" id="rr{{idx}}box" style="padding-left:5px; padding-top:20px;display: none;">
+                      {% endwith %}
+                      <div class="re-reply-box">
+                        <form action="{% url 'pybo:issue_reply_create' issue_id=issue.id _side=1 %}" method="post">
+                          {% csrf_token %}
+                          <input type="text" class="re-reply-input" id="comment" placeholder="답글 입력"
+                            value="{{ form.subject.value|default_if_none:'' }}">
+                          {% comment %} 대댓글 버튼 {% endcomment %}
+                          <span class="re-reply-btn" type="submit" id="reply-btn">등록</span>
+                        </form>
+                      </div>
+                      {% for issue_rereply in issue_reply.issue_rereply_set.all %}
+                      <div class="row pd-0" style="padding-left:0; padding-bottom:10px;">
+                        <div class="col-1 pd-0 ">
+                          <i class="fa fa-user-circle fa-2x" style="color:black;"></i></div>
+                        <div class="col-9 pd-0" style="padding-top:3px;margin-left:20px; width:83%">
+                          <b class="diss-reply-id">익명</b>
+                          <div class="diss-reply-comment">{{ issue_rereply }}</div>
+                          <div class="diss-tool">
+                            <span class="diss-like"><i class="fa fa-heart"
+                                style="font-size:14px;">&nbsp;{{issue_rereply.like}}</i></span>
+                            <span class="report-rereply" type="button" id="reply-btn">신고</span>
+                          </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+                    </div>
+                    <!--- 여기까지 대댓글 -->
+                  </div>
+                </div>
+                <!-- 여기까지 댓글 -->
+                {% endif %}
+                {% endfor %}
+              </div>
+            </div>
 
-      <div class="본인댓글프로필"></div> 
-      <span class=슈퍼맨>슈퍼맨</span>
-      <div class="댓글1">소방청에 따르면 , 5년 간 개 물림 사고가 
-        12,345건 발생. 하지만 이 중 맹견을 제외한 일반  
-        반려견 건수가 전체의 80% 였습니다.  따라서 
-        맹견의 범위 확대에 찬성합니다. </div>
-        <div class="좋아요 좋아요수">&#9829</div>
-        <span class="좋아요수">20</span>
-        <span class="답글">답글&ensp;&ensp;2</span>
-        <span class="신고버튼">신고</span>   
-        <div class="답글입력">
-            답글 입력
-            <div class="답글취소동그라미엑스"></div>
-            <div class="답글취소동그라미"></div>
+          </div>
+          {% comment %} 반대 {% endcomment %}
+          <div class="tab_content" id="b_content">
+            <div class="discuss-notice">토의 참여자들은 여러분의 생각이 담긴 댓글을 참고하여 <br>토의를 진행합니다.
+              <div class="discuss-notice-text">* 올바른 토의문화를 위해 각 번호의 의견과 무관한 댓글<br>(정치, 인신공격 등)에 있어 바로 삭제 조치가 이루어집니다.
+              </div>
+            </div>
+            <br><br>
+            <div class="input-group mb-3">
+              <i class="fa fa-user-circle fa-2x" style="color:black;">&nbsp;</i>
+              <form class="custom_form" action="{% url 'pybo:issue_reply_create' issue_id=issue.id _side=0 %}"
+                method="post">
+                {% csrf_token %}
+                <input type="text" class="form-control" placeholder="의견을 들려주세요 :)" aria-label="Recipient's username"
+                  name="content" aria-describedby="button-addon2" style="border-radius:8px;">
+                <button class="d-sub" type="submit" id="button-addon2">등록</button>
+              </form>
+            </div>
+            <div class="diss-reply">
+              <div class="container">
+                <!--댓글-->
+                {% for issue_reply in issue.issue_reply_set.all %}
+                {% if issue_reply.side != True %}
+                <div class="row pd-0" style="padding-left:0; margin-bottom:30px;">
+                  <div class="col-1 pd-0 ">
+                    <i class="fa fa-user-circle fa-2x" style="color:black;"></i></div>
+                  <div class="col-9 pd-0" style="padding-top:3px;margin-left:10px;">
+                    <b class="diss-reply-id">익명</b>
+                    <div class="diss-reply-comment">{{ issue_reply.content }}</div>
+                    <div class="diss-tool">
+                      <span class="diss-like"><i class="fa fa-heart"
+                          style="font-size:14px;">&nbsp;{{issue_reply.like}}</i></span>
+                      {% with idx=issue_reply.id %}
+                      <span class="reply-btn" type="button" id="rr{{idx}}" onclick="openCloser(this.id)">답글
+                        {{rereply_num|get_item:idx}}</span>
+                      <span class="report-btn" type="button" id="reply-btn">신고</span>
+                    </div>
+                    <!--- 대댓글 -->
+
+                    <div class="container" id="rr{{idx}}box" style="padding-left:5px; padding-top:20px;display: none;">
+                      {% endwith %}
+                      <div class="re-reply-box">
+                        <input type="text" class="re-reply-input" placeholder="답글 입력">
+                        {% comment %} 대댓글 버튼 {% endcomment %}
+                        <span class="re-reply-btn" type="button" id="reply-btn">등록</span>
+                      </div>
+
+                      {% for issue_rereply in issue_reply.issue_rereply_set.all %}
+                      <div class="row pd-0" style="padding-left:0; padding-bottom:10px;">
+                        <div class="col-1 pd-0 ">
+                          <i class="fa fa-user-circle fa-2x" style="color:black;"></i></div>
+                        <div class="col-9 pd-0" style="padding-top:3px;margin-left:20px; width:83%">
+                          <b class="diss-reply-id">익명</b>
+                          <div class="diss-reply-comment">{{ issue_rereply }}</div>
+                          <div class="diss-tool">
+                            <span class="diss-like"><i class="fa fa-heart"
+                                style="font-size:14px;">&nbsp;{{issue_rereply.like}}</i></span>
+                            <span class="report-rereply" type="button" id="reply-btn">신고</span>
+                          </div>
+                        </div>
+                      </div>
+                      {% endfor %}
+                    </div>
+                    <!--- 여기까지 대댓글 -->
+                  </div>
+                </div>
+                <!-- 여기까지 댓글 -->
+                {% endif %}
+                {% endfor %}
+              </div>
+            </div>
+            {% comment %} 반대 끝 {% endcomment %}
+          </div>
+          {% comment %} 리플 끝 {% endcomment %}
         </div>
-        <div class="답글입력란"></div>
-        
-        <i class="fa fa-heart fa-spin fa-fw"></i>
-        </div>
-        </div>
-<div class="position-relative">
-  <div class="position-absolute top-0 start-0"></div>
-  <div class="position-absolute top-0 end-0"></div>
-  <div class="position-absolute top-50 start-50"></div>
-  <div class="position-absolute bottom-50 end-50"></div>
-  <div class="position-absolute bottom-0 start-0"></div>
-  <div class="position-absolute bottom-0 end-0"></div>
-</div>
+
+        {% comment %} 반대 끝 {% endcomment %}
+      </div>
+      {% comment %} 리플 끝 {% endcomment %}
+
+    </div>
+  </div>
+
 </body>
+
 {% endblock content %}

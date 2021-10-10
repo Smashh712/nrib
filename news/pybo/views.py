@@ -1,7 +1,7 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Question
+from .models import Issue_reply, Issue_rereply, Question, Issue
 from django.utils import timezone
-from .forms import QuestionForm, AnswerForm
+from .forms import QuestionForm, AnswerForm, Issue_rereplyForm, Issue_replyForm
 from django.core.paginator import Paginator
 
 # Create your views here.
@@ -10,7 +10,7 @@ from django.core.paginator import Paginator
 def index(request):
     page = request.GET.get("page", "1")  # pybo/?page=1 : default=1
 
-    question_list = Question.objects.order_by("-create_date")
+    question_list = Issue.objects.order_by("-create_date")
 
     paginator = Paginator(question_list, 10)
     page_obj = paginator.get_page(page)
@@ -81,7 +81,43 @@ def timeline(request):
     return render(request, "timeline.html", context)
 
 
-def discuss(request, question_id):
-    question = get_object_or_404(Question, pk=question_id)
-    context = {"question": question}
+def discuss(request, issue_id):
+    issue = get_object_or_404(Issue, pk=issue_id)
+    issue_reply = Issue_reply.objects.filter(issue="2")
+    agree_num = issue_reply.filter(side=True).count()
+    disagree_num = issue_reply.filter(side=False).count()
+    issue_rereply = Issue_rereply.objects
+    rereply_num = {}
+    for reply in issue_reply:
+        i = reply.id
+        rereply_num[i] = issue_rereply.filter(issue_reply=i).count()
+    context = {
+        "issue": issue,
+        "num": [agree_num, disagree_num],
+        "rereply_num": rereply_num,
+    }
+
     return render(request, "discuss.html", context)
+
+
+def issue_reply_create(request, issue_id, _side):
+    if request.method == "POST":
+        issue = get_object_or_404(Issue, pk=issue_id)
+        issue.issue_reply_set.create(
+            content=request.POST.get("content"),
+            create_date=timezone.now(),
+            like=0,
+            side=_side,
+        )
+        return redirect("pybo:discuss", issue_id=issue.id)
+
+
+def issue_reply_create2(request, issue_id):
+    if request.method == "POST":
+        issue = get_object_or_404(Issue, pk=issue_id)
+        issue.issue_reply_set.create(
+            content=request.POST.get("content"),
+            create_date=timezone.now(),
+            like=0,
+        )
+        return redirect("pybo:discuss", issue_id=issue.id)

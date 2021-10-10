@@ -11,5 +11,10 @@ urlpatterns = [
     path("<int:question_id>/board/", views.board, name="board"),
     path("question/create/", views.question_create, name="question_create"),
     path("test/", views.timeline, name="timeline"),
-    path("test2/<question_id>/", views.discuss, name="discuss"),
+    path("test2/<issue_id>/", views.discuss, name="discuss"),
+    path(
+        "issue_reply_create/<issue_id>/<int:_side>",
+        views.issue_reply_create,
+        name="issue_reply_create",
+    ),
 ]
