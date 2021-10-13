@@ -1,0 +1,129 @@
+@font-face {
+  font-family: "SBAggroM";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.inner_box {
+  margin-left: 20%;
+  margin-right: 20%;
+}
+
+.buttons {
+  width: 80%;
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+.tline {
+  height: 40px;
+  background-color: #f2efef;
+  box-shadow: 0px 5px 6px #00000029;
+  border: 0.5px solid #ebebeb;
+  border-radius: 33px;
+  text-align: center;
+  display: block;
+  color: black;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.fas {
+  color: #0080ff;
+  text-align: center;
+}
+
+.talks {
+  color: #0080ff;
+}
+
+h1 {
+  font-size: 20px;
+  text-align: center;
+}
+
+.k1 {
+  font-size: 15px;
+  text-align: center;
+  letter-spacing: -0.15px;
+  color: #999999;
+}
+.k2 {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.15px;
+  color: #999999;
+}
+
+.k3 {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.15px;
+  color: #999999;
+}
+
+h4 {
+  font-size: 20px;
+  text-align: center;
+  letter-spacing: -0.15px;
+  color: #999999;
+}
+
+.title {
+  font-size: 30px;
+  text-align: center;
+  font-family: "SBAggroM";
+}
+
+.cont {
+  height: 60px;
+  background: #ffffff 0% 0% no-repeat padding-box;
+  box-shadow: 3px 8px 8px #00000008;
+  border: 1px solid #e8e8e8;
+  border-radius: 8px;
+  opacity: 1;
+  color: black;
+  scroll-padding-top: 20px;
+  text-align: center;
+  display: block;
+  text-decoration: none;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.qmark {
+  background: #ffffff 0% 0% no-repeat padding-box;
+  border: 1px dashed #d1d1d1;
+  border-radius: 8px;
+  opacity: 1;
+  height: 60px;
+  font-size: 25px;
+  text-align: center;
+  display: block;
+  color: #999999;
+}
+
+.suggesto {
+  height: 38px;
+  background: #0080ff 0% 0% no-repeat padding-box;
+  border-radius: 60px;
+  opacity: 1;
+  color: white;
+  text-align: center;
+  display: block;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.logos {
+  width: 100%;
+  text-align: center;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}

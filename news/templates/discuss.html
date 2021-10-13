@@ -130,9 +130,9 @@
                     <div class="container" id="rr{{idx}}box" style="padding-left:5px; padding-top:20px;display: none;">
                       {% endwith %}
                       <div class="re-reply-box">
-                        <form action="{% url 'pybo:issue_reply_create' issue_id=issue.id _side=1 %}" method="post">
+                        <form action="{% url 'pybo:rereply_create' issue_reply_id=issue_reply.id %}" method="post">
                           {% csrf_token %}
-                          <input type="text" class="re-reply-input" id="comment" placeholder="답글 입력"
+                          <input type="text" class="re-reply-input" name="content" placeholder="답글 입력"
                             value="{{ form.subject.value|default_if_none:'' }}">
                           {% comment %} 대댓글 버튼 {% endcomment %}
                           <span class="re-reply-btn" type="submit" id="reply-btn">등록</span>
@@ -205,9 +205,13 @@
                     <div class="container" id="rr{{idx}}box" style="padding-left:5px; padding-top:20px;display: none;">
                       {% endwith %}
                       <div class="re-reply-box">
-                        <input type="text" class="re-reply-input" placeholder="답글 입력">
-                        {% comment %} 대댓글 버튼 {% endcomment %}
-                        <span class="re-reply-btn" type="button" id="reply-btn">등록</span>
+                        <form action="{% url 'pybo:rereply_create' issue_reply_id=issue_reply.id %}" method="post">
+                          {% csrf_token %}
+                          <input type="text" class="re-reply-input" id="comment" placeholder="답글 입력"
+                            value="{{ form.subject.value|default_if_none:'' }}" name="content">
+                          {% comment %} 대댓글 버튼 {% endcomment %}
+                          <span class="re-reply-btn" type="submit" id="reply-btn">등록</span>
+                        </form>
                       </div>
 
                       {% for issue_rereply in issue_reply.issue_rereply_set.all %}
@@ -245,7 +249,9 @@
 
     </div>
   </div>
-
+  <div class="container-md " style="width:500px; background-color: #fff; padding:0;">
+    asdfasdfasdf
+  </div>
 </body>
 
 {% endblock content %}

@@ -1,0 +1,59 @@
+{% extends 'base.html' %} {% load static %}
+
+{% block css %}
+<link rel="stylesheet" href="{% static 'nrib_choicecss.css' %}">
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
+{% endblock css %}
+{% block content %}
+
+<div class="container row" style="float: none; margin:0 auto; padding:0; ">
+    <div class="col-md-3" style="width:500px;float: none; margin:0 auto; padding:0;background-color:#fff;">
+        <div class="k1"><br>NRIB X 서울시 디자인 거버넌스</div>
+        <div class="title">반려인과 비반려인 <br>갈등문제</div>
+        <h1> 현재 <span style="color: #0080ff;">953</span> 분 참여 중 </h1>
+        <div>
+            <img src="{% static 'pic/dog.png' %}" style="width:100%">
+        </div>
+
+        <div class=" k2"><br> 팩트를 시간순서로 정리한 <br></div>
+
+        <div class="tline buttons" type="button">타임라인 열기</div>
+
+        <div class="k3"><br> 원하시는 대화방에 입장해주세요 <br><br></div>
+
+
+        <div class="wrap">
+            <div class="cont buttons">저 개는 왜 입마개를 안하죠?</div>
+            <i class="fas fa-comment">
+                <div class="talks">823</div>
+            </i>
+        </div>
+        <div class="wrap">
+            <div class="cont buttons">강아지 동반시설에 대해서</div>
+            <i class="fas fa-comment">
+                <div class=" talks">823
+                </div>
+            </i>
+        </div>
+        <div class="wrap">
+            <div class="cont buttons">펫티켓이 뭐죠?</div>
+            <i class="fas fa-comment">
+                <div class="talks">823</div>
+            </i>
+        </div>
+        </i>
+
+        <div class="qmark buttons">?</div>
+
+        <h4>추가로 대화하고 싶은 주제가 있다면<br>직접 제안해 주세요! </h4>
+        <div class="suggesto buttons">제안하기</div>
+
+        <br>
+        <br>
+        <div class="logos">
+            <img src="{% static 'pic/kcc.jpg' %}" height=37>
+            <img src="{% static 'pic/nia.png' %}" height=50>
+        </div>
+    </div>
+</div>
+{% endblock content %}

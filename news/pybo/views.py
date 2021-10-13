@@ -113,12 +113,20 @@ def issue_reply_create(request, issue_id, _side):
         return redirect("pybo:discuss", issue_id=issue.id)
 
 
-def issue_reply_create2(request, issue_id):
+def rereply_create(request, issue_reply_id):
     if request.method == "POST":
-        issue = get_object_or_404(Issue, pk=issue_id)
-        issue.issue_reply_set.create(
+        issue_reply = get_object_or_404(Issue_reply, pk=issue_reply_id)
+        issue_reply.issue_rereply_set.create(
             content=request.POST.get("content"),
             create_date=timezone.now(),
             like=0,
         )
-        return redirect("pybo:discuss", issue_id=issue.id)
+        print("test")
+        return redirect("pybo:discuss", issue_id=issue_reply.issue.id)
+
+
+def choice_issue(request, issue_id):
+    question_list = Question.objects.order_by("create_date")
+    print(question_list)
+    context = {"question_list": question_list}
+    return render(request, "nrib_choice.html", context)

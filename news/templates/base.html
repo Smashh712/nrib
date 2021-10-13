@@ -5,10 +5,7 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
   <link rel="stylesheet" type="text/css" href="{% static 'bootstrap.min.css' %}" />
-  <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
-
-  {% block css %}
-  {% endblock css %}
+  {% block css %}{% endblock css %}
 
 
 
@@ -19,11 +16,11 @@
   {% comment "" %}{% include "navbar.html" %}{% endcomment %}
 
   {% block content %}{% endblock %}
-  {% block js %}
-  {% endblock js %}
+
+  {% block js %}{% endblock js %}
   <!-- jQuery JS -->
   <script src="{% static 'jquery-3.6.0.min.js' %}"></script>
   <!-- Bootstrap JS-->
   <script src="{% static 'bootstrap.min.js' %}"></script>
-  <script src="{% static 'timeline.js' %}"></script>
+
 </body>

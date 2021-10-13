@@ -13,8 +13,14 @@ urlpatterns = [
     path("test/", views.timeline, name="timeline"),
     path("test2/<issue_id>/", views.discuss, name="discuss"),
     path(
-        "issue_reply_create/<issue_id>/<int:_side>",
+        "issue_reply_create/<issue_id>/<int:_side>/",
         views.issue_reply_create,
         name="issue_reply_create",
     ),
+    path(
+        "rereply_create/<issue_reply_id>/",
+        views.rereply_create,
+        name="rereply_create",
+    ),
+    path("issues/<issue_id>/choice/", views.choice_issue, name="choice_issue"),
 ]
