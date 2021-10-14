@@ -1,0 +1,190 @@
+@font-face {
+  font-family: "c";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansMedium.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Cafe24Ssurround";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2105_2@1.0/Cafe24Ssurround.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SBAggroM";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Recipekorea";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/Recipekorea.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+.parentlogo {
+  background-color: white;
+  width: 1280px;
+  margin: 0 auto;
+}
+.logo {
+  color: #0080ff;
+  font-size: 200px;
+  font-family: "GmarketSansBold";
+  text-align: center;
+}
+
+.x {
+  font-family: "Recipekorea";
+  color: #0080ff;
+
+  font-size: 130px;
+}
+
+.ani {
+  animation: btoot 1s ease-out forwards;
+}
+
+.intro {
+  font-size: 100px;
+  font-weight: 500;
+  color: black;
+  font-family: "GmarketSansLight";
+  visibility: hidden;
+  text-align: center;
+}
+.intros {
+  font-size: 50px;
+  font-weight: 500;
+  color: rgb(51, 61, 75);
+  font-family: "GmarketSansBold";
+  visibility: hidden;
+  text-align: center;
+}
+
+.dot {
+  font-size: 200px;
+  color: #0173e6;
+  text-align: center;
+  font-family: "GmarketSansBold";
+}
+
+.img {
+  top: 4000px;
+  text-align: center;
+}
+
+.timeline {
+  background-color: white;
+  width: 1280px;
+  height: 1000px;
+}
+.small {
+  font-size: 30px;
+  color: rgb(119, 119, 119);
+  font-family: "GmarketSansBold";
+}
+.subject {
+  font-size: 90px;
+  color: black;
+  font-family: "GmarketSansBold";
+}
+.subject2 {
+  font-size: 90px;
+  color: black;
+  font-family: "GmarketSansBold";
+}
+
+.vidcon {
+  position: relative;
+  padding-bottom: 56.25%;
+  padding-top: 30px;
+  height: 0;
+  overflow: hidden;
+}
+
+.vidcon iframe,
+.vidcon object,
+.vidcon embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.talk {
+  background-color: white;
+  width: 1280px;
+  height: 1000px;
+}
+
+.plustext {
+  font-size: 25px;
+  color: black;
+  font-family: "GmarketSansLight";
+  margin-left: 50px;
+}
+
+.nia {
+  margin-top: 300px;
+  margin-left: 290px;
+}
+
+.last {
+  font-family: "GmarketSansBold";
+  font-size: 50px;
+}
+
+.letstart {
+  font-size: 60px;
+  font-family: "GmarketSansLight";
+  color: white;
+  background-color: #0080ff;
+  box-shadow: 1pc 10px 10px 0 rgba(0, 0, 0, 0.03);
+  border: solid 2px #e8e8e8;
+  border-radius: 60px;
+  padding: 10px 73px 9px;
+}
+@keyframes btoot {
+  0% {
+    transform: translateY(300%);
+  }
+}
+
+.mage {
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+}

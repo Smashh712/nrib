@@ -1,0 +1,300 @@
+@font-face {
+  font-family: "SBAggroM";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+.plustext {
+  font-size: 25px;
+  color: black;
+  font-family: "GmarketSansLight";
+  margin-left: 50px;
+}
+
+.parent {
+  background-color: white;
+  width: 1280px;
+  margin: 0 auto;
+}
+
+.lets {
+  text-align: center;
+  font-size: 45px;
+  margin-top: 30px;
+  font-weight: 900px;
+  font-family: "SBAggroM";
+}
+
+.oma {
+  font-family: "SBAggroM";
+  margin-left: 60px;
+  font-size: 100px;
+  color: #0080ff;
+}
+
+.select {
+  color: #0080ff;
+  font-size: 50px;
+  margin-bottom: 20px;
+  margin-left: 60px;
+  font-family: "GmarketSansBold";
+}
+
+.keyword {
+  background: rgb(255, 255, 255) 0% 0% no-repeat padding-box;
+  box-shadow: 8px 8px 6px #00000029;
+  border-radius: 50px 50px 50px 50px;
+  width: 90%;
+  height: 550px;
+  float: left;
+  margin-left: 10px;
+  margin-right: 10px;
+  position: relative;
+  animation: small 0.5s forwards;
+}
+
+.keyword:hover {
+  animation: big 0.5s forwards;
+}
+
+.keyword:hover .tempdiv {
+  height: 70px;
+}
+.boxup {
+  animation: boxup 0.5s forwards;
+}
+.boxdown {
+  animation: boxdown 0.5s forwards;
+}
+
+@keyframes boxup {
+  from {
+    height: 200px;
+  }
+  to {
+    height: 170px;
+  }
+}
+
+@keyframes boxdown {
+  from {
+    height: 170px;
+  }
+  to {
+    height: 200px;
+  }
+}
+@keyframes big {
+  to {
+    width: 95%;
+    height: 580px;
+  }
+}
+@keyframes small {
+  from {
+    width: 95%;
+    height: 580px;
+  }
+  to {
+    width: 90%;
+    height: 550px;
+  }
+}
+.keyword .darkness {
+  animation: dark-out 0.5s;
+}
+
+.keyword:hover .darkness {
+  animation: dark 0.5s forwards;
+}
+
+.keyword:hover .top {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+.keyword:hover .bottom {
+  -webkit-filter: blur(3px);
+  -moz-filter: blur(3px);
+  -o-filter: blur(3px);
+  -ms-filter: blur(3px);
+  filter: blur(3px);
+}
+
+@keyframes dark {
+  to {
+    opacity: 0.5;
+  }
+}
+@keyframes dark2 {
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes dark-out {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes dark-out2 {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.keyword:hover .screen {
+  animation: dark2 0.5s forwards;
+}
+
+.screen {
+  animation: dark-out2 0.5s forwards;
+}
+
+.ccon {
+  position: relative;
+  top: 25px;
+  text-align: center;
+  font-family: "SBAggroM";
+  font-size: 30px;
+  color: black;
+}
+
+.nnum {
+  top: 5px;
+  position: relative;
+  text-align: center;
+}
+
+.suggest {
+  width: 331px;
+  height: 90px;
+  background: #0080ff 0% 0% no-repeat padding-box;
+  box-shadow: 9px 9px 9px #00000029;
+  border-radius: 50px;
+  opacity: 1;
+  margin-bottom: 5px;
+  color: white;
+  font-size: 30px;
+  position: relative;
+  left: 470px;
+  top: 80px;
+}
+
+ul {
+  font-size: 0;
+}
+
+ul > li {
+  display: inline-block;
+  vertical-align: top;
+  width: 33.3%;
+}
+
+ul > li > .keyword > a {
+  display: block;
+  width: auto;
+  text-decoration: none;
+  margin: 5px;
+}
+
+ul > li > .keyword > a .top {
+  width: 100%;
+  border-radius: 50px 50px 0px 0px;
+}
+
+.screen {
+  width: 100%;
+  overflow: hidden;
+  position: absolute;
+  top: 30%;
+  z-index: 1;
+  color: rgb(255, 255, 255);
+  font-size: 25px;
+  font-weight: 700;
+  text-align: center;
+  padding: 20px;
+  opacity: 0;
+}
+
+ul > li > .keyword > a:hover .screen {
+  bottom: 0%;
+}
+
+.screen p {
+  position: relative;
+  z-index: 2;
+}
+
+.top {
+  position: relative;
+  overflow: hidden;
+}
+
+.dott {
+  position: relative;
+  font-size: 70px;
+  left: 630px;
+  color: rgb(92, 92, 92);
+  font-family: "GmarketSansBold";
+}
+.nia {
+  margin-top: 150px;
+  margin-left: 290px;
+}
+
+a {
+  text-decoration: none;
+}
+
+.letstart {
+  text-align: center;
+  font-size: 40px;
+  font-family: "GmarketSansLight";
+  color: white;
+  background-color: #0080ff;
+  box-shadow: 1pc 10px 10px 0 rgba(0, 0, 0, 0.03);
+  border: solid 2px #e8e8e8;
+  border-radius: 60px;
+  padding: 10px 73px 9px;
+}
+
+.img-wrap {
+  width: inherit;
+  height: inherit;
+  border-radius: inherit;
+}
+
+.darkness {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: black;
+  opacity: 0;
+  z-index: 1;
+  border-radius: 50px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");

@@ -1,0 +1,96 @@
+{% extends 'base.html' %} {% load static template_filters  %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'nrib_maincss.css' %}" />
+{% endblock css %}
+{% block js %}
+<script src="{% static 'main.js' %}"></script>
+{% endblock js %}
+
+
+{% block content %}
+<div>&nbsp;</div>
+<div class="parentlogo">
+    <div class="logo ani" id="logo">&nbsp;NRIB.<br> </div>
+    <div class="intro" id="intro"> THE <br> NEW RULES<br>WE MADE.<br></div>
+    <div class="intros" id="intros"><br><br>THE 다양한 의견을 모으기 위해 우린,<br>새로운 규칙을 만들었다.<br>
+        <div class="dot">. <span style="color: #2893ff;">.</span><span style="color: #80bfff;"> .</span><br></div>
+        <div style="height:100px"></div>
+    </div>
+    <div class="vidcon">
+        <iframe width=100 src="https://www.youtube.com/embed/7BeaT2LlAQ8" title="YouTube video player" frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen></iframe>
+    </div>
+
+
+    <div class="timeline">
+
+        <div class="subject">
+            <br>
+            <div class="x">,</div>
+            <div class="text">&nbsp;문제의<br>&nbsp;시작과 끝-<br>&nbsp;한눈에<br> &nbsp;바라보기.</div>
+            <div class="small">&nbsp;&nbsp;&nbsp;aka. 타임라인</div>
+        </div>
+        <div class="content">
+            <img src="{% static 'pic/timeline.png' %}" width="830px" height="1236px" style="float: left;" alt=""
+                class="css-zxsb69 ey5meut1">
+            <h1><span style="font-family: SBAggroM;"> <br><br><br><br><br><br><br><br>문제가<br>시작한 순간부터 현재까지
+                    <br>팩트만을&nbsp;<span style="color:#0080ff;">기록하다</span><span
+                        style="font-family: GmarketSansBold;">.</span></h1>
+            <div class="plustext"><br><br><br><br><br>/ 문제 관련 법안의 진행과정 <br>/ 사건의 진행과정 </div>
+
+        </div>
+
+        <div class="talk">
+            <div class="subject">
+                <div class="x">
+                    <div style="height:100px"></div><br><br>,,
+                </div>
+                <div>&nbsp;'문제'에<br>&nbsp;대해서만<br> &nbsp;대화하기.</div>
+                <div class="small">&nbsp;&nbsp;&nbsp;aka. 대화방</div>
+            </div>
+            <div class="dog">
+                <img src="{% static "pic/22.png" %}" width="830px" height="1236px" style="float: right;" alt=""
+                    class="css-zxsb69 ey5meut1">
+
+            </div>
+            <span style="font-size: 32px; font-family: SBAggroM;"><br><br><br><br><br><br><br>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<span style="color: #0080ff;">NO ROOM
+                    FOR</span><br><br>&nbsp;&nbsp;&nbsp;욕, 인신공격, 정치적발언</span>
+            <div class="plustext"><br><br><br><br>/ 각 문제별 소 주제로
+                세분화<br>/ 이해집단 별 댓글분리 기능</span> </div>
+
+
+        </div>
+        <div style="height:300px;"></div>
+        <div class="tman">
+            <div class="subject">
+                <div style="height:100px"></div>
+                <div class="x"><br><br><br><br><br>,,,</div>
+                <div>&nbsp;T맨이<br>&nbsp;5분이면<br> &nbsp;설명해줌.</div>
+                <div class="small">&nbsp;&nbsp;&nbsp;aka. 컨텐츠</div>
+            </div>
+
+            <span style="font-size: 32px; font-family: SBAggroM; text-align: center;"><br><br>
+                &nbsp;&nbsp;&nbsp;내 성격알지? 깔끔한거.<br>&nbsp;&nbsp;&nbsp;<span style="color: #0080ff;">5분</span>이면 영상으로
+                문제설명
+                <br>&nbsp;&nbsp;&nbsp;충분해.</span>
+
+            <img src="{% static "pic/movie.png" %}" style="float: right;" width=" 1100px">&nbsp;&nbsp;
+        </div>
+        <div style="height:200px;"></div>
+        <div class="last" style="text-align:center;">
+            <div style="height:300px"></div>
+            &nbsp;어때, 같이 해볼래?<br>
+            <div style="height:20px"></div>
+            <a href="{% url 'pybo:topic'%}"> <b class="letstart">시작하러 가기</b>
+        </div>
+
+        <div class="nia">
+            <img src={% static "pic/nia.png" %} height=100 style="margin-left:10px">
+            <img src={% static "pic/kcc.jpg" %} height=100 style="margin-left:10px">
+        </div>
+    </div>
+</div>
+
+{% endblock content %}

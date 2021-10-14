@@ -4,7 +4,9 @@ from . import views
 app_name = "pybo"
 
 urlpatterns = [
-    path("", views.index, name="index"),
+    path("", views.main, name="main"),
+    path("topic", views.topic, name="topic"),
+    path("data", views.index, name="index"),
     path("<int:question_id>/", views.detail, name="detail"),
     path("answer/create/<int:question_id>/", views.answer_create, name="answer_create"),
     path("answer/delete/<int:question_id>/", views.answer_delete, name="answer_delete"),

@@ -7,6 +7,16 @@ from django.core.paginator import Paginator
 # Create your views here.
 
 
+def main(request):
+    context = None
+    return render(request, "nrib_main.html", context)
+
+
+def topic(request):
+    context = None
+    return render(request, "nrib_list.html", context)
+
+
 def index(request):
     page = request.GET.get("page", "1")  # pybo/?page=1 : default=1
 

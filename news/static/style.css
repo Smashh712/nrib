@@ -124,6 +124,9 @@ body {
   color: #0080ff;
   font-family: "Pretendard-SemiBold";
 }
+.contents {
+  color: #000;
+}
 
 .text-align-right {
   text-align: right;

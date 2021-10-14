@@ -1,0 +1,93 @@
+{% extends 'base.html' %} {% load static template_filters  %}
+{% block css %}
+<link rel="stylesheet" type="text/css" href="{% static 'nrib_listcss.css' %}" />
+{% endblock css %}
+{% block js %}
+<script src="{% static 'list.js' %}"></script>
+{% endblock js %}
+
+{% block content %}
+<div class="parent">
+    <br>
+    <div class="lets"> 아래에서 관심있는 키워드를 선택해 주세요</div>
+
+    <div class="oma">,</div>
+    <div class="select">키워드 고르기</div>
+
+    <ul id="boxx">
+        <li><a href="{% url 'pybo:choice_issue' 1 %}">
+                <div class="keyword" id="k1">
+                    <div class="darkness"></div>
+                    <div class="screen">서울시 디자인거버넌스와<br>함께
+                        문제를 해결하는 <br>키워드입니다.
+                    </div>
+                    <div class="top">
+                        <div class="img-wrap">
+                            <img class="thum_img" src="{% static 'pic/thum/dog.png' %}"
+                                style="width: 100%; border-radius: 50px 50px 0px 0px;">
+                        </div>
+                    </div>
+                    <div class="bottom">
+                        <div class="ccon">반려인 비반려인 <br>갈등문제 <br>
+                            <span style="font-size: 20px;">
+                                <span style="color: #0080ff;">993</span> 분이 참여 중</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'pybo:choice_issue' 2 %}">
+                <div class="keyword" id="k2">
+                    <div class="darkness"></div>
+                    <div class="screen" style="color: #ffffff;">
+                        Covid-19 바이러스가<br>유발시킨<br>다양한 사회문제를<br>해결해봅시다!
+                    </div>
+                    <div class="top">
+
+                        <img class="thum_img" src="{% static 'pic/thum/covid2.png' %}"
+                            style="width: 100%; border-radius: 50px 50px 0px 0px;">
+                    </div>
+
+                    <div class="bottom">
+                        <div class="ccon">Covid-19가<br>만든 문제<br><span style="font-size: 20px;">
+                                <span style="color: #0080ff;">준비 중</span></div>
+                    </div>
+                </div>
+            </a>
+        </li>
+
+        <li>
+            <a href="{% url 'pybo:choice_issue' 3 %}">
+                <div class="keyword" id="k3">
+                    <div class="darkness"></div>
+                    <div class="screen" style="color: #ffffff;">
+                        영원히 끝나지 않을 것만 같은 <br>우리 사회의 성별 갈등!<br>우리는 이겨낼 수<br>있을까요?
+                    </div>
+                    <div class="top">
+
+                        <img class="thum_img" src="{% static 'pic/thum/gen.jpeg' %}"
+                            style="width: 100%; border-radius: 50px 50px 0px 0px;">
+                    </div>
+                    <div class="bottom">
+                        <div class="ccon">성별 간 갈등 <br>젠더이슈 <br><span style="font-size: 20px;">
+                                <span style="color: #0080ff;">준비 중</span>
+                        </div>
+                    </div>
+                </div>
+            </a>
+        </li>
+    </ul>
+    <div class="tempdiv" style="height:200px" id="tempdiv"></div>
+    <div class="last" style="text-align:center; position:relative; top:0;">
+        <a href="{% url 'pybo:topic'%}"> <b class="letstart" style="position:relative;">키워드 제안하기</b>
+    </div>
+
+    <div class="nia">
+        <img src={% static "pic/nia.png" %} height=100 style="margin-left:10px">
+        <img src={% static "pic/kcc.jpg" %} height=100 style="margin-left:10px">
+    </div>
+</div>
+
+{% endblock content %}
