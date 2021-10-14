@@ -77,9 +77,18 @@ def board(request, question_id):
 
 def timeline(request, topic_id):
     topic = get_object_or_404(Topic, pk=topic_id)
+    topic.subject = topic.subject.replace("_", "\n")
     question_list = Event.objects.filter(topic=topic).order_by("create_date")
-    print(question_list)
-    context = {"question_list": question_list}
+    start_date = question_list[0].create_date.strftime("%Y.%m.%d")
+    end_date = question_list[len(question_list) - 1].create_date.strftime("%Y.%m.%d")
+    for i in question_list:
+        i.subject = i.subject.replace("_", "\n")
+    print()
+    context = {
+        "question_list": question_list,
+        "topic": topic,
+        "date": [start_date, end_date],
+    }
     return render(request, "timeline.html", context)
 
 

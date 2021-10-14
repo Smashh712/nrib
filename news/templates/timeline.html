@@ -3,46 +3,69 @@
 
 {% block css %}
 <link rel="stylesheet" type="text/css" href="{% static 'style.css' %}" />
-
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css" rel="stylesheet">
 {% endblock css %}
-
 {% block js %}
 <script src="{% static 'timeline.js' %}"></script>
 {% endblock js %}
 
 {% block content %}
 
-<div class="time_container">
-  <div class="top-section Myeongjo">
-    <h1>당신의 중립을 위한 재료</h1>
+<div class="time_container" style="color:black;">
+  <div class="top-section">
+    <h1>{{ topic | linebreaks }} 타임라인</h1>
   </div>
 
-  <div class="timeline">
-    <div class="line"></div>
+  <h1 style="text-align: center;"><span style="font-family: GmarketSansLight; color: black;">{{date.0}} -
+      {{date.1}}</span></h1>
+  <br>
+  <div class="container">
+    <div class="row align-items-start">
+      <div class="col-md-5" style="text-align: right;">
+        <h3 style=" font-family:GmarketSansBold; display: inline;">{{topic.left}}</h3>
+      </div>
+      <div class="col-md-2">
+        <h3 style="text-align: center; font-family:GmarketSansBold;">
+          <&nbsp;>
+        </h3>
+      </div>
+      <div class="col-md-5" style="text-align: left;">
+        <h3 style="text-align: left; font-family:GmarketSansBold;display: inline;">{{topic.right}}</h3>
+      </div>
+    </div>
 
-    {% for question in question_list %}
-    {% if question.side == False %}
-    <div class="section time-right">
-      <div class="bead"></div>
-      <div class="content text-align-left">
-        <p class="date">{{ question.create_date }}</p>
-        <p></p>
-        <h2 class="Myeongjo">{{ question.subject}}</h2>
-        <p>{{ question.content }}</p>
-      </div>
-      {% elif question.side == True %}
-      <div class="section">
+
+
+
+
+
+    <div class="timeline">
+      <div class="line"></div>
+
+      {% for question in question_list %}
+      {% if question.side == False %}
+      <div class="section time-right">
         <div class="bead"></div>
-        <div class="content text-align-right">
+        <div class="content text-align-left">
           <p class="date">{{ question.create_date }}</p>
-          <p></p>
-          <h2 class="Myeongjo">{{ question.subject}}</h2>
-          <p>{{ question.content }}</p>
+          <h2 class="Myeongjo">{{ question.subject | linebreaks}}</h2>
+          <p>{{ question.content| linebreaks }}</p>
         </div>
-        {% endif %}
+        {% elif question.side == True %}
+        <div class="section">
+          <div class="bead"></div>
+          <div class="content text-align-right">
+            <p class="date">{{ question.create_date }}</p>
+            <h2 class="Myeongjo">{{ question.subject | linebreaks}}</h2>
+            <p>{{ question.content| linebreaks }}</p>
+          </div>
+          {% endif %}
+        </div>
+        {% endfor %}
       </div>
-      {% endfor %}
     </div>
   </div>
-</div>
-{% endblock %}
+  <div class="forclick">
+    <div class="letstart">시작하러 가기</div>
+  </div>
+  {% endblock %}

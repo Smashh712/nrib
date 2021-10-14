@@ -1,3 +1,30 @@
+@font-face {
+  font-family: "GmarketSansLight";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansLight.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "GmarketSansBold";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2001@1.1/GmarketSansBold.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "SBAggroM";
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff") format("woff");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Pretendard-SemiBold";
+  src: url("https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-SemiBold.woff") format("woff");
+  font-weight: 600;
+  font-style: normal;
+}
+
 body {
   font-family: Nanum gothic;
   margin: 0;
@@ -5,8 +32,7 @@ body {
   line-height: 1.5;
   font-weight: 400;
   color: white;
-  background-color: #4c4177;
-  background-image: linear-gradient(315deg, #4c4177 0%, #2a5470 74%);
+  background-color: white;
 }
 
 .time_container {
@@ -21,6 +47,9 @@ body {
   padding: 4rem 0;
   max-width: 600px;
   margin: 0 auto;
+  font-family: "GmarketSansBold";
+  color: #000;
+  font-size: 100px;
 }
 
 .timeline {
@@ -47,7 +76,7 @@ body {
   height: 1rem;
   width: 1rem;
   border-radius: 50%;
-  background-color: #000;
+  background-color: #0080ff;
   left: 50%;
   transform: translateX(-50%);
 }
@@ -92,6 +121,8 @@ body {
   width: calc(50% - 2rem);
   padding: 0 10px 10px 10px;
   text-align: right;
+  color: #0080ff;
+  font-family: "Pretendard-SemiBold";
 }
 
 .text-align-right {
@@ -103,7 +134,7 @@ body {
 }
 .date {
   position: relative;
-  right: 250px;
+  color: #000;
 }
 
 .show-me:nth-child(n) {
