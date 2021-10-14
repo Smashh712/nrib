@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404, redirect
-from .models import Issue_reply, Issue_rereply, Question, Issue
+from .models import Issue_reply, Issue_rereply, Question, Issue, Topic, Event
 from django.utils import timezone
 from .forms import QuestionForm, AnswerForm, Issue_rereplyForm, Issue_replyForm
 from django.core.paginator import Paginator
@@ -75,8 +75,9 @@ def board(request, question_id):
     return render(request, "pybo/board.html", context)
 
 
-def timeline(request):
-    question_list = Question.objects.order_by("create_date")
+def timeline(request, topic_id):
+    topic = get_object_or_404(Topic, pk=topic_id)
+    question_list = Event.objects.filter(topic=topic).order_by("create_date")
     print(question_list)
     context = {"question_list": question_list}
     return render(request, "timeline.html", context)
@@ -84,7 +85,7 @@ def timeline(request):
 
 def discuss(request, issue_id):
     issue = get_object_or_404(Issue, pk=issue_id)
-    issue_reply = Issue_reply.objects.filter(issue="2")
+    issue_reply = Issue_reply.objects.filter(issue=issue)
     agree_num = issue_reply.filter(side=True).count()
     disagree_num = issue_reply.filter(side=False).count()
     issue_rereply = Issue_rereply.objects
@@ -125,8 +126,20 @@ def rereply_create(request, issue_reply_id):
         return redirect("pybo:discuss", issue_id=issue_reply.issue.id)
 
 
-def choice_issue(request, issue_id):
-    question_list = Question.objects.order_by("create_date")
-    print(question_list)
-    context = {"question_list": question_list}
+def choice_issue(request, topic_id):
+    topic = get_object_or_404(Topic, pk=topic_id)
+    topic.subject = topic.subject.replace("_", "\n")
+    issue_list = Issue.objects.filter(topic=topic_id).order_by("create_date")
+    reply_num = {}
+    sum_reply = 0
+    for i in issue_list:
+        num = Issue_reply.objects.filter(issue=i).count()
+        reply_num[i] = num
+        sum_reply += num
+    context = {
+        "issue_list": issue_list,
+        "topic": topic,
+        "sum_reply": sum_reply,
+        "reply_num": reply_num,
+    }
     return render(request, "nrib_choice.html", context)

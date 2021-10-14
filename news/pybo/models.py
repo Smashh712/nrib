@@ -3,6 +3,26 @@ from django.db import models
 # Create your models here.
 
 
+class Topic(models.Model):
+    subject = models.CharField(max_length=200)
+    image = models.TextField()
+    create_date = models.DateTimeField()
+
+    def __str__(self):
+        return self.subject
+
+
+class Event(models.Model):
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE, null=True)
+    subject = models.CharField(max_length=200)
+    content = models.TextField()
+    create_date = models.DateTimeField()
+    side = models.NullBooleanField()
+
+    def __str__(self):
+        return self.subject
+
+
 class Question(models.Model):
     subject = models.CharField(max_length=200)
     content = models.TextField()
@@ -14,6 +34,7 @@ class Question(models.Model):
 
 
 class Issue(models.Model):
+    topic = models.ForeignKey(Topic, on_delete=models.CASCADE, null=True)
     subject = models.CharField(max_length=200)
     content = models.TextField()
     create_date = models.DateTimeField()

@@ -1,6 +1,7 @@
 @font-face {
   font-family: "SBAggroM";
-  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff") format("woff");
+  src: url("https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2108@1.1/SBAggroM.woff")
+    format("woff");
   font-weight: normal;
   font-style: normal;
 }
@@ -16,21 +17,32 @@
 }
 
 .tline {
-  height: 40px;
-  background-color: #f2efef;
+  height: 60px;
+  width: 60%;
+  margin-left: 20%;
+  margin-right: 20%;
+  background-color: #eceaea49;
   box-shadow: 0px 5px 6px #00000029;
   border: 0.5px solid #ebebeb;
   border-radius: 33px;
   text-align: center;
   display: block;
   color: black;
-  font-size: 20px;
+  font-size: 25px;
   font-weight: bold;
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  opacity: 1;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .fas {
   color: #0080ff;
-  text-align: center;
+  margin-top: 5px;
+  margin-left: 300px;
+  font-size: 15px;
 }
 
 .talks {
@@ -40,6 +52,8 @@
 h1 {
   font-size: 20px;
   text-align: center;
+  margin-bottom: 25px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .k1 {
@@ -47,12 +61,14 @@ h1 {
   text-align: center;
   letter-spacing: -0.15px;
   color: #999999;
+  font-family: "Noto Sans KR", sans-serif;
 }
 .k2 {
   font-size: 20px;
   text-align: center;
   letter-spacing: -0.15px;
   color: #999999;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .k3 {
@@ -60,35 +76,45 @@ h1 {
   text-align: center;
   letter-spacing: -0.15px;
   color: #999999;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 h4 {
   font-size: 20px;
   text-align: center;
-  letter-spacing: -0.15px;
+
   color: #999999;
+  margin-bottom: 20px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .title {
-  font-size: 30px;
+  font-size: 35px;
   text-align: center;
   font-family: "SBAggroM";
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 
 .cont {
-  height: 60px;
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  height: 80px;
   background: #ffffff 0% 0% no-repeat padding-box;
   box-shadow: 3px 8px 8px #00000008;
   border: 1px solid #e8e8e8;
-  border-radius: 8px;
+  border-radius: 10px;
   opacity: 1;
   color: black;
   scroll-padding-top: 20px;
   text-align: center;
   display: block;
   text-decoration: none;
-  font-size: 20px;
+  font-size: 22px;
   font-weight: bold;
+  padding-top: 20px;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .qmark {
@@ -96,15 +122,25 @@ h4 {
   border: 1px dashed #d1d1d1;
   border-radius: 8px;
   opacity: 1;
-  height: 60px;
+  height: 80px;
   font-size: 25px;
   text-align: center;
   display: block;
   color: #999999;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: 5%;
+  margin-right: 5%;
+  padding-top: 20px;
+  width: 90%;
 }
 
 .suggesto {
-  height: 38px;
+  height: 60px;
+  width: 60%;
+  margin-right: 20%;
+  margin-left: 20%;
+  padding-top: 15px;
   background: #0080ff 0% 0% no-repeat padding-box;
   border-radius: 60px;
   opacity: 1;
@@ -113,6 +149,7 @@ h4 {
   display: block;
   font-size: 20px;
   font-weight: bold;
+  font-family: "Noto Sans KR", sans-serif;
 }
 
 .logos {
@@ -127,3 +164,10 @@ a {
 li {
   list-style: none;
 }
+
+.wrap {
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+@import url("https://fonts.googleapis.com/css2?family=Noto+Sans+KR:wght@500&display=swap");
